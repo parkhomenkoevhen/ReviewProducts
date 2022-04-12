@@ -29,6 +29,10 @@ export const routes: Route[] = [
     path: 'login',
     component: AuthComponent,
   },
+  {
+    path: '**',
+    redirectTo: '/product'
+  },
 
 ]
 @NgModule({
