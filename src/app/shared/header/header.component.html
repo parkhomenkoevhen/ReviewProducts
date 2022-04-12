@@ -1,0 +1,14 @@
+<div class="popover-header">
+
+  <i class="fa fa-home" [routerLink]="'/'"></i>
+  <div class="user-active">
+
+  <div *ngIf="user">
+    <i class="fa fa-user-circle"> {{user?.username }}</i>
+  </div>
+
+  <a *ngIf="!user" (click)="logIn('login')">Login/Registration</a>
+  <a *ngIf="user" (click)="logOut()">Logout</a>
+  </div>
+
+</div>

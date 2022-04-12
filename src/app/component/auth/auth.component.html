@@ -1,0 +1,32 @@
+<div class="register">
+  <h2>{{isRegister  ? "Registration" : "Login"}}</h2>
+
+  <form [formGroup]="loginForm" (submit)="logIn()">
+    <div class="input-wrapper">
+      <label>Username:</label>
+      <input type="text"
+             formControlName="username"
+      >
+    </div>
+
+    <div class="input-wrapper">
+      <label>Password:</label>
+      <input type="password"
+             formControlName="password"
+      >
+    </div>
+
+    <div class="message"  [class.error]= "!!errorMessages" [class.succsess]="!!successMessages" >
+      <span *ngIf="errorMessages">{{errorMessages.message}}
+      </span>
+      <span *ngIf="successMessages">{{successMessages}} <a (click)="isRegister = false"> LogIn</a>
+      </span>
+    </div>
+
+
+    <button class="btn" type="submit" [disabled]="loginForm.invalid"> {{isRegister ? "Registration" : "Login"}}</button>
+    <div class="link" *ngIf="!isRegister "> Don't have account? <a (click)=changeRegister(true)>Registration</a></div>
+    <div class="link" *ngIf="isRegister"> Do you have account? <a (click)="changeRegister(false)">Login</a></div>
+
+  </form>
+</div>

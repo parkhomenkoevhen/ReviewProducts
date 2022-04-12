@@ -1,0 +1,26 @@
+<div class="review-card" [class.canWrite]="canWrite">
+
+  <i class="fa fa-user-circle"></i>
+
+  <div class="body">
+    <h3>{{canWrite ? user?.username : review?.created_by?.username}}</h3>
+    <app-star-rating-component
+      class="stars"
+      [selectedRating]="review?.rate || 0" [disabled]="!canWrite"
+      (rateEmitter)=setRate($event);
+    ></app-star-rating-component>
+    <div *ngIf="!canWrite" class="comment">
+      <span>Comment: </span>
+      <span>{{review?.text}}</span>
+    </div>
+    <div *ngIf="canWrite" class="write-comment">
+    <input type="text"
+           class="input-text"
+           [formControl]="comment"
+    >
+      <i class="fa fa-check-circle" [class.disabled]="checkValid()" (click)="saveComment()" > </i>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,19 @@
+<div class="product-cart" (click)="openDetail()">
+  <div class="image">
+    <img [src]="api + product?.img" brokenImg/>
+  </div>
+
+  <div class="card">
+    <h2 class="header">
+      <div>Name:</div>
+
+      <div>{{product?.title}}</div>
+    </h2>
+
+    <div class="body">
+      <app-star-rating-component [selectedRating]="rating" class="stars"></app-star-rating-component>
+      <div class="reviews-count"> {{this.reviews.length}} reviews</div>
+    </div>
+
+  </div>
+</div>

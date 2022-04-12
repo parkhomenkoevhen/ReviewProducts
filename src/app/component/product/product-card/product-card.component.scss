@@ -1,0 +1,52 @@
+.product-cart {
+  font-family: sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background: #d9e3fc;
+  margin: 10px;
+  overflow-y: hidden;
+
+  border: 1px solid cadetblue;
+  border-radius: 5px;
+
+  height: 200px;
+  width: 60vw;
+
+  .image {
+    margin: 20px;
+
+    img {
+      border: 2px solid darkslategrey;
+      border-radius: 5px;
+      height: 120px;
+    }
+  }
+
+  .card {
+    margin-left: 50px;
+    padding: 10px;
+
+    .header {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .body {
+      width: 400px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .stars {
+      margin-right: 10px;
+      font-size: 30px;
+    }
+
+    .reviews-count {
+      color: darkslategrey;
+    }
+
+  }
+}

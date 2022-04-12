@@ -1,0 +1,45 @@
+<div class="product-view">
+  <div class="image">
+    <img [src]="api + product?.img" brokenImg/>
+  </div>
+
+  <div class="product-details">
+    <div class="card-header">
+      <h2 class="header">
+        <div>Name:</div>
+        <div>{{product?.title}}</div>
+      </h2>
+      <div class="body">
+        <app-star-rating-component [selectedRating]="rating" class="stars"></app-star-rating-component>
+        <div class="reviews-count"> {{this.reviews.length}} reviews</div>
+      </div>
+    </div>
+
+    <div class="description-card">
+      <button class="left" [class.isDescrp]="isDescrp" (click)="isDescrp = !isDescrp">Description</button>
+      <button class="right" [class.isDescrp]="!isDescrp" (click)="isDescrp = !isDescrp"> Reviews</button>
+
+      <div *ngIf="isDescrp" class="description">
+        <h4> Product Description</h4>
+        <div class="description-text">
+          {{product?.text}}
+        </div>
+      </div>
+
+      <div *ngIf="!isDescrp" class="reviews">
+        <div *ngIf="user">
+          <app-review-card [canWrite]="true" [idProduct]="product?.id"></app-review-card>
+        </div>
+        <div *ngIf="!user">
+          <div class="messages">Only logged in users can leave a review <a [routerLink]="'/login'">LogIn</a></div>
+        </div>
+        <div *ngFor="let review of reviews">
+          <app-review-card [review]="review"></app-review-card>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+

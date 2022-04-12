@@ -1,0 +1,87 @@
+.register {
+  margin: 100px auto 0;
+  width: 350px;
+  font-family: sans-serif;
+  color: darkslategrey;
+
+  h2 {
+    text-align: center;
+  }
+
+  .input-wrapper {
+    margin: 30px 0;
+    border: 2px solid darkslategrey;
+    border-radius: 5px;
+    background: #f3f9fe;
+    color: #a9a5a5;
+    height: 30px;
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    label {
+      padding-left: 5px;
+      width: 90px;
+    }
+
+    input {
+      border: none;
+      background: transparent;
+      height: 35px;
+
+      &:focus-visible {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+
+  .btn {
+    border: 2px solid darkslategrey;
+    border-radius: 5px;
+    background: #798cbd;
+    height: 45px;
+    padding: 3px;
+    width: 350px;
+    color: #f3f9fe;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+
+  .link {
+    color: darkslategrey;
+    margin-top: 15px;
+
+    a {
+      color: lightseagreen;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .message {
+    margin-top: -10px;
+    height: 30px;
+    margin-bottom: 15px;
+
+    &.error {
+      color: red;
+    }
+
+    &.success {
+      a {
+        color: lightseagreen;
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

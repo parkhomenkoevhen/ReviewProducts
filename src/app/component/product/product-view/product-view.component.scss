@@ -1,0 +1,94 @@
+.product-view {
+  margin: 100px auto 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+  background: #d9e3fc;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+
+  border: 1px solid cadetblue;
+  border-radius: 5px;
+
+  width: 60%;
+  height: 86vh;
+
+
+  .image {
+    margin: 20px;
+
+    img {
+      border: 2px solid darkslategrey;
+      border-radius: 5px;
+      height: 250px;
+    }
+  }
+
+  .card-header {
+    margin-left: 50px;
+    padding: 10px;
+
+    .header {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .body {
+      width: 400px;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+    .description-card {
+      margin-left: 50px;
+      padding-bottom: 20px;
+
+      button{
+        height: 30px;
+        width: 150px;
+        border-radius: 5px ;
+        font-size: 16px;
+        &.isDescrp{
+          color: #f3f9fe;
+          background: #798cbd;
+        }
+      }
+
+      .description {
+        padding: 10px;
+        height: 300px;
+        width: 530px;
+        margin-top: 5px;
+        .description-text {
+          padding: 20px;
+          height: 250px;
+          width: 530px;
+          border-top: 1px solid  darkslategrey;
+        }
+      }
+      .reviews{
+        padding-bottom: 10px;
+        padding-top: 30px;
+        overflow-y: scroll;
+        height: 60vh;
+        .messages {
+          margin-bottom: 20px;
+          a {
+            color: lightseagreen;
+          }
+        }
+      }
+    }
+
+    .stars {
+      margin-right: 10px;
+      font-size: 30px;
+    }
+
+    .reviews-count {
+      color: darkslategrey;
+    }
+}

@@ -1,0 +1,44 @@
+.popover-header {
+  background: #798cbd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 50px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  i {
+    margin-right: 5px;
+    font-size: 50px;
+    color: #f3f9fe;
+    &:hover{
+      cursor: pointer;
+      color: azure;
+    }
+  }
+  .user-active {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    i{
+      font-size: 20px;
+    }
+  }
+
+  a{
+    margin: 0 5px 0;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: #f3f9fe;
+    &:hover{
+      color: #f3f9fe;
+      text-decoration: underline ;
+      cursor: pointer;
+    }
+  }
+}

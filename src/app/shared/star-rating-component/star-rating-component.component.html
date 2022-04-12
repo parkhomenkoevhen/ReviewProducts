@@ -1,0 +1,5 @@
+<div class="star-rating-container star-rating-animation" >
+  <div *ngFor="let star of stars" [ngClass]="star.class" (click)="selectStar(star.id)">
+    <i  class="fa fa-star"></i>
+  </div>
+</div>
